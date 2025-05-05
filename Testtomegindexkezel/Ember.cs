@@ -42,7 +42,7 @@ namespace Testtomegindexkezel
             switch (bmi)
             {
                 case double i  when i>0 && i<16:
-                        Console.WriteLine("Súlyos soványság Észak-Koreai vagy akkor normális :)");
+                    Console.WriteLine("Súlyos soványság Észak-Koreai vagy akkor normális :)");
                     break;
                 case double i when i >= 16 && i < 16.99:
                     Console.WriteLine("Mérséklet soványság");

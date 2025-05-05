@@ -63,10 +63,10 @@ namespace Testtomegindexkezel
                     Console.WriteLine("II. Fokú Elhízás kezd túl sokk lenni a meki");
                     break;
                 case double i when i >= 40 && i< 100:
-                    Console.WriteLine("III. Fokú Elhízás,nem te vagy Orbán Viktor??");
+                    Console.WriteLine("III. Fokú Elhízás");
                     break;
                 default:
-                    Console.WriteLine("Hú bazzmeg ez magass");
+                    Console.WriteLine("Hú ez magass");
                     break;
             }
         }

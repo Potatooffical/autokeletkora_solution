@@ -10,7 +10,7 @@ namespace Testtomegindexkezel
     {
         static void Main(string[] args)
         {
-            var ferenc = new Ember("Gyurcsány Ferenc",2003,"Fiú",175,312);
+            var ferenc = new Ember("Gyurcsány Ferenc",2003,"Fiú",175,75);
 
             Console.WriteLine($"Ferenc adatai: {ferenc.Eletkor()},{ferenc.atalakit()},{ferenc.Testtomegindex()}");
 

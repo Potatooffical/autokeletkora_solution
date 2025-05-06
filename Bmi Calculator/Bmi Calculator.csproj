@@ -94,5 +94,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Testtomegindexkezel\Testtomegindexkezel.csproj">
+      <Project>{e8432289-5c56-49c7-9b91-f12295b77dde}</Project>
+      <Name>Testtomegindexkezel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

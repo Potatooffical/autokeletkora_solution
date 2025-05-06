@@ -43,7 +43,7 @@
                 FontSize="20px" 
                 FontWeight="Bold"
                 Foreground="Green"
-                Background="Gray"/>
+                Background="Gray" Click="btn_szamol_Click"/>
         <TextBlock HorizontalAlignment="Left" 
                    Margin="41,260,0,0" 
                    TextWrapping="Wrap" 
@@ -54,14 +54,23 @@
                    FontSize="20px" 
                    RenderTransformOrigin="0.432,4.236"/>
         <TextBlock HorizontalAlignment="Left" 
-                   Margin="41,310,0,0" 
+                   Margin="15,305,0,0" 
                    TextWrapping="Wrap" 
                    Text="Az ön eredménye:" 
                    VerticalAlignment="Top" 
                    Height="34" 
-                   Width="219" 
+                   Width="168" 
                    FontSize="20px" 
-                   RenderTransformOrigin="0.432,4.236"/>
+                   RenderTransformOrigin="0.432,4.236">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.368"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
         <Button x:Name="btn_ujszamol" 
                 Content="Új számolás" 
                 HorizontalAlignment="Left" 
@@ -72,8 +81,8 @@
                 FontSize="20px" 
                 FontWeight="Bold" 
                 RenderTransformOrigin="0.316,4.251"
-                Foreground="DarkOrange"
-                Background="Gray"/>
+                Foreground="DarkRed"
+                Background="Gray" Click="btn_ujszamol_Click"/>
         <TextBlock x:Name="tb_testomegindex" 
                    HorizontalAlignment="Left" 
                    Margin="269,259,0,0" 
@@ -82,26 +91,28 @@
                    Height="34" 
                    Width="89" 
                    FontSize="20px" 
-                   RenderTransformOrigin="0.432,4.236"/>
+                   RenderTransformOrigin="0.432,4.236" 
+                   Background="{DynamicResource {x:Static 
+                SystemColors.ActiveBorderBrushKey}}"/>
         <TextBlock x:Name="tb_eredmeny" 
                    HorizontalAlignment="Left" 
-                   Margin="210,309,0,0" 
+                   Margin="184,309,0,0" 
                    TextWrapping="Wrap" 
                    VerticalAlignment="Top" 
-                   Height="34" 
-                   Width="89" 
-                   FontSize="20px" 
-                   RenderTransformOrigin="0.432,4.236"/>
-        <TextBox x:Name="magassag" 
+                   Height="25" 
+                   Width="205" 
+                   FontSize="15px" 
+                   RenderTransformOrigin="0.432,4.236" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}"/>
+        <TextBox x:Name="tbx_magassag" 
                  HorizontalAlignment="Left" 
                  Margin="195,94,0,0" 
                  TextWrapping="Wrap" 
                  Text="" 
                  VerticalAlignment="Top" 
                  Width="75" Height="35" 
-                 FontSize="15px" 
+                 FontSize="25px" 
                  RenderTransformOrigin="0.133,0.715"/>
-        <TextBox x:Name="testsuly" 
+        <TextBox x:Name="tbx_testsuly" 
                  HorizontalAlignment="Left" 
                  Margin="165,144,0,0" 
                  TextWrapping="Wrap" 
@@ -109,7 +120,7 @@
                  VerticalAlignment="Top" 
                  Width="75" 
                  Height="35" 
-                 FontSize="15px"/>
+                 FontSize="25px"/>
 
     </Grid>
 </Window>

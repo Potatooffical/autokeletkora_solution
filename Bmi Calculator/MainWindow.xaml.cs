@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Testtomegindexkezel;
 
 namespace Bmi_Calculator
 {
@@ -23,6 +24,32 @@ namespace Bmi_Calculator
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btn_szamol_Click(object sender, RoutedEventArgs e)
+        {
+            //int magassag = int.Parse(tbx_magassag.Text);
+            //int suly = int.Parse(tbx_testsuly.Text);
+            if (double.TryParse(tbx_magassag.Text, out double magassag) && double.TryParse(tbx_testsuly.Text, out double suly) && magassag>0 && suly>0)
+            {
+                var egyember = new Ember("Gyurcsny Ferenc ", 2000, "Férfi", magassag, suly);
+                double tti = egyember.Testtomegindex();
+                tb_testomegindex.Text = Convert.ToString(Math.Round(tti, 2));
+                tb_eredmeny.Text = egyember.Bmitabla_WPF();
+            }
+            else
+            {
+                MessageBox.Show ("FormatException,Program Nem Megfelelő Karaktert talált ");
+            }
+            
+        }
+
+        private void btn_ujszamol_Click(object sender, RoutedEventArgs e)
+        {
+            tb_testomegindex.Text = " ";
+            tb_eredmeny.Text = " ";
+            tbx_magassag.Clear();
+            tbx_testsuly.Clear();
         }
     }
 }

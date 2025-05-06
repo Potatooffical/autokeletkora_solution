@@ -71,6 +71,7 @@ namespace Testtomegindexkezel
             }
         }
         //név, születéis év, nem, magasság(cm)
+
         public void Kiir()
         {
             Console.WriteLine($"{Nev},{Szuletesi_ev},{Nem},{Magassag},{Testsuly}");
